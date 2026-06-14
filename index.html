@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/595e254446.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <link rel="stylesheet" href="css/style.css" />
+  <body>
+    <header class="header">
+      <div class="navbar">
+        <!--  LOGO -->
+        <h1 class="logo">
+          <a href="#">
+            <img src="https://picsum.photos/125/40" alt="公司名稱" />
+          </a>
+        </h1>
+
+        <!-- 桌機手機 同一份 menu -->
+        <nav class="nav-menu">
+          <div class="menu-top">
+            <div class="logo mobile-logo">
+              <a href="#">
+                <img src="https://picsum.photos/125/40" alt="公司名稱" />
+              </a>
+            </div>
+            <div class="close-btn" aria-label="關閉選單">✕</div>
+          </div>
+
+          <div class="menu-list">
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle has-icon"
+                >關於我們<i class="fa-solid fa-angle-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <a href="#">企業介紹</a>
+                <a href="#">沿革記事</a>
+                <a href="#">國際認證</a>
+                <a href="#">智慧財產權與隱私權政策</a>
+                <a href="#">人才招募</a>
+                <a href="#">訓練發展</a>
+                <a href="#">產學合作</a>
+              </div>
+            </div>
+
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle has-icon"
+                >產品系列<i class="fa-solid fa-angle-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <a href="#">攜帶型打氣筒</a>
+                <a href="#">直立型打氣筒</a>
+                <a href="#">工具及配件</a>
+              </div>
+            </div>
+
+            <a href="#" class="has-icon"
+              >關係企業<i class="fa-solid fa-angle-down"></i
+            ></a>
+
+            <div class="dropdown">
+              <a href="#" class="dropdown-toggle has-icon"
+                >新聞中心<i class="fa-solid fa-angle-down"></i
+              ></a>
+              <div class="dropdown-content">
+                <a href="#">企業公告</a>
+                <a href="#">參展訊息</a>
+                <a href="#">媒體報導</a>
+              </div>
+            </div>
+
+            <a href="#" class="has-icon"
+              >企業永續<i class="fa-solid fa-angle-down"></i
+            ></a>
+            <a href="#" class="has-icon"
+              >產品服務<i class="fa-solid fa-angle-down"></i
+            ></a>
+
+            <a href="#" class="apply">我要應徵</a>
+
+            <div class="lang">
+              <a href="/tw">繁中</a>
+              <a href="/en">EN</a>
+            </div>
+          </div>
+        </nav>
+
+        <!-- 漢堡選單（手機用） -->
+        <div class="nav-right">
+          <a href="#" class="apply">我要應徵</a>
+          <div class="nav-btn" aria-label="開啟選單">
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Banner -->
+      <div class="banner">
+        <div class="banner-top">
+          <div class="banner-hero">
+            <img src="https://picsum.photos/300/200" alt="banner" />
+          </div>
+          <div class="banner-text">
+            <h2>創新設計 專利研發</h2>
+            <h3>BE<br />INNOVATION</h3>
+            <p>
+              BETO owns over 400 patents in various categories<br />
+              We stands the mission and bring revolution to the market
+            </p>
+          </div>
+        </div>
+        <div class="scroll">
+          SCROLL DOWN<i class="fa-solid fa-angle-down"></i>
+        </div>
+      </div>
+      <!-- About -->
+      <section class="about">
+        <div class="container">
+          <div class="about-item">
+            <div class="about-img">
+              <div class="img1"></div>
+              <div class="img2"></div>
+            </div>
+            <div class="about-text">
+              <h2>BE THE ORIGINAL</h2>
+              <h3>忠於原創：將理念轉化為真實</h3>
+              <p>
+                雙餘集團創立於1988年，從台中深根發展，為自行車配件、家用健身及戶外用品專業ODM/OEM製造商。37年來，從打氣筒出發，在自行車配件及健身用品領域上累積生產專才，並立下深厚的技術基礎，加上創新的研發設計能力與穩健的經營模式，持續不斷開發獨特且創意的產品，並成功外銷至全世界。
+              </p>
+              <div class="about-btn">
+                <a href="#">了解更多</a>
+                <a href="#">關係企業介紹</a>
+              </div>
+            </div>
+          </div>
+          <div class="about-item reverse">
+            <div class="about-img">
+              <div class="img3"></div>
+            </div>
+            <div class="about-text">
+              <h2>OUR MISSION</h2>
+              <h3>將理念轉化為真實，提供最佳解決方案</h3>
+              <div class="about-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h4>1988<span>年</span></h4>
+                    <p>創立時間</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h4>400<span>張</span></h4>
+                    <p>專利設計</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h4>200<span>位</span></h4>
+                    <p>快樂的員工</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- News -->
+      <section class="news">
+        <div class="container">
+          <div class="news-header">
+            <div class="news-title">
+              <h2>NEWS</h2>
+              <p>新聞中心</p>
+            </div>
+            <div class="news-btn">
+              <a href="#" class="btn-more">了解更多</a>
+            </div>
+          </div>
+          <div class="news-article swiper">
+            <div class="swiper-wrapper">
+              <article class="news-card swiper-slide">
+                <div class="card-content">
+                  <a href="#" class="card-title"
+                    >2025 Taipei Cycle Show 台北自行車展</a
+                  >
+                  <div class="card-body">
+                    <p>
+                      2025 TAPEI CYCLE台北國際自行車展，於3月26日至3月29日登場
+                    </p>
+                    <time datetime="2025-03-21">21.Mar.2025</time>
+                  </div>
+                </div>
+              </article>
+              <article class="news-card swiper-slide">
+                <div class="card-content">
+                  <a href="#" class="card-title"
+                    >BETO支持美國最大騎行活動 助...</a
+                  >
+                  <div class="card-body">
+                    <p>
+                      BETO透過每年支持美國年度募款騎行活動，捐助MACC基金會致力於終結兒童癌症和相關血液疾...
+                    </p>
+                    <time datetime="2024-10-24">24.Oct.2024</time>
+                  </div>
+                </div>
+              </article>
+              <article class="news-card swiper-slide">
+                <div class="card-content">
+                  <a href="#" class="card-title"
+                    >BETO 跨足音樂產業 亮相 2024 ...</a
+                  >
+                  <div class="card-body">
+                    <p>
+                      BETO，作為全球知名的製造業者，一直致力於創新與高效製造。2024
+                      年，BETO 將正式進軍音...
+                    </p>
+                    <time datetime="2024-09-23">23.Sep.2024</time>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--   Items swiper -->
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img
+              src="https://images.unsplash.com/photo-1640958899295-957d780644e7?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="產品名稱1"
+            />
+            <div class="slide-content">
+              <h3>產品名稱 01</h3>
+              <p>Item 01</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://images.unsplash.com/photo-1760377821917-722e631cd716?q=80&w=1625&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="產品名稱"
+            />
+            <div class="slide-content">
+              <h3>產品名稱 02</h3>
+              <p>Item 02</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://images.unsplash.com/photo-1581783898377-1c85bf937427?q=80&w=1015&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="產品名稱"
+            />
+            <div class="slide-content">
+              <h3>產品名稱 03</h3>
+              <p>Item 03</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://images.unsplash.com/photo-1611288870280-4a322b8ec7ec?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="產品名稱"
+            />
+            <div class="slide-content">
+              <h3>產品名稱 04</h3>
+              <p>Item 04</p>
+            </div>
+          </div>
+        </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <!-- Recruit -->
+      <section class="recruit">
+        <div class="recruit-img">
+          <img src="https://picsum.photos/400/200" alt="人才招募" />
+        </div>
+        <div class="container">
+          <div class="recruit-text">
+            <h2>Recruit</h2>
+            <p>人才招募</p>
+            <small>BETO與您一起快樂工作、幸福成長，歡迎您的加入</small>
+            <div class="recruit-btn">
+              <a href="#" class="btn-join">加入我們</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-nav">
+          <div class="footer-item">
+            <h4 class="accordion-title">關於我們</h4>
+
+            <nav class="accordion-content">
+              <a href="#">企業介紹</a>
+              <a href="#">沿革記事</a>
+              <a href="#">國際認證</a>
+              <a href="#">智慧財產與隱私權政策</a>
+              <a href="#">人才招募</a>
+              <a href="#">訓練發展</a>
+              <a href="#">產學合作</a>
+            </nav>
+          </div>
+          <div class="footer-item">
+            <h4 class="accordion-title">產品系列</h4>
+
+            <nav class="accordion-content">
+              <a href="#">所有產品</a>
+              <a href="#">騎遊配件</a>
+            </nav>
+          </div>
+          <div class="footer-item">
+            <h4 class="accordion-title">關係企業</h4>
+            <nav class="accordion-content">
+              <a href="#">雙餘實業</a>
+            </nav>
+          </div>
+          <div class="footer-item">
+            <h4 class="accordion-title">新聞中心</h4>
+            <nav class="accordion-content">
+              <a href="#">所有訊息</a>
+              <a href="#">企業公告</a>
+              <a href="#">參展訊息</a>
+              <a href="#">媒體報導</a>
+            </nav>
+          </div>
+          <div class="footer-item">
+            <h4 class="accordion-title">企業永續</h4>
+            <nav class="accordion-content">
+              <a href="#">所有訊息</a>
+              <a href="#">企業永續發展</a>
+              <a href="#">環境永續</a>
+              <a href="#">社會公益</a>
+              <a href="#">利害關係人專區</a>
+            </nav>
+          </div>
+          <div class="footer-item">
+            <h4 class="accordion-title">產品服務</h4>
+            <nav class="accordion-content">
+              <a href="#">產品服務</a>
+              <a href="#">成功案例</a>
+              <a href="#">常見問題</a>
+            </nav>
+          </div>
+        </div>
+        <div class="footer-info">
+          <a href="#">
+            <img
+              src="https://picsum.photos/125/40"
+              alt="BETO"
+              class="footer-logo"
+            />
+          </a>
+          <p class="company-name">
+            雙餘實業股份有限公司 / 豐餘實業股份有限公司
+          </p>
+          <div class="company-info">
+            <address>406 台中市北屯區文心路四段696號18樓</address>
+            <p class="tel">TEL: +886-4-2231-5920</p>
+            <p class="fax">FAX: +886-4-2231-5890</p>
+            <p class="social">CONTACT US</p>
+          </div>
+          <div class="social-media-icon">
+            <a href="#"
+              ><i
+                class="fa-brands fa-youtube"
+                style="color: rgb(255, 255, 255)"
+              ></i
+            ></a>
+            <a href="#"
+              ><i
+                class="fa-brands fa-linkedin-in"
+                style="color: rgb(255, 255, 255)"
+              ></i
+            ></a>
+          </div>
+          <p class="copyright">
+            © BETO ENG. & MKTG., CO., LTD. All Rights Reserved.
+            <br />網站設計 - iBest
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+    <script type="module">
+      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs";
+
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        // 響應式中斷點
+        breakpoints: {
+          // 當螢幕寬度 >= 768px
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+          },
+          // 當螢幕寬度 >= 992px
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+          // 當螢幕寬度 >= 1024px
+          1024: {
+            slidesPerView: 4,
+            spaceBetween: 0,
+          },
+        },
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      const newsSwiper = new Swiper(".news-article", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+
+          1024: {
+            slidesPerView: 3,
+            allowTouchMove: false,
+          },
+        },
+      });
+
+      const items = document.querySelectorAll(".footer-item");
+
+      // 對「每一個 footer-item」，找到accordion-title
+      items.forEach((item) => {
+        const title = item.querySelector(".accordion-title");
+
+        //幫「每一個標題」加點擊事件
+        title.addEventListener("click", () => {
+          //先記錄狀態 > 是否開啟
+          const isOpen = item.classList.contains("active");
+
+          //先全部關閉
+          items.forEach((i) => i.classList.remove("active"));
+
+          //如果剛剛是close > 才open
+          if (!isOpen) {
+            item.classList.add("active");
+          }
+        });
+      });
+
+      const navBtn = document.querySelector(".nav-btn");
+      const navMenu = document.querySelector(".nav-menu");
+      const closeBtn = document.querySelector(".close-btn");
+
+      navBtn.addEventListener("click", () => {
+        navMenu.classList.add("active");
+      });
+
+      closeBtn.addEventListener("click", () => {
+        navMenu.classList.remove("active");
+      });
+
+      const dropdown = document.querySelectorAll(".has-icon");
+      dropdown.forEach((item) => {
+        item.addEventListener("click", function (e) {
+          e.preventDefault();
+          this.parentElement.classList.toggle("active");
+        });
+      });
+    </script>
+  </body>
+</html>

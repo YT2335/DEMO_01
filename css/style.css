@@ -1,0 +1,901 @@
+/* 全域設定 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family:
+    "Lato",
+    sans-serif,
+    "Noto Sans TC",
+    Heiti TC,
+    "メイリオ",
+    sans-serif;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+}
+/* Navbar */
+.header {
+  /*   position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 999;
+  background: #fff;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10px;
+}
+.logo {
+  width: 125px;
+  height: 40px;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.nav-right .apply {
+  color: #333;
+  font-size: 14px;
+  border: 1px solid #d2d2d2;
+  padding: 14px 30px;
+}
+/* 漢堡選單 */
+/* 外層按鈕容器 */
+.nav-btn {
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  position: relative;
+}
+.nav-btn span,
+.nav-btn span::before,
+.nav-btn span::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 3px;
+  background: #999;
+}
+/* 中間那條線 */
+.nav-btn span {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* 上面那條線 span基準往上10px */
+.nav-btn span::before {
+  top: -10px;
+}
+/* 下面那條線 span基準往下10px */
+.nav-btn span::after {
+  top: 10px;
+}
+/* slide menu */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  width: 100%;
+  height: 100vh;
+
+  background: linear-gradient(#1e5799, #2989d8);
+  color: #fff;
+
+  transform: translateX(100%);
+  transition: 0.4s ease;
+}
+.nav-menu.active {
+  transform: translateX(0);
+}
+.menu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.close-btn {
+  cursor: pointer;
+  color: black;
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-list a {
+  color: #fff;
+  display: block;
+  text-align: center;
+  padding: 20px 10px;
+}
+.dropdown.active .dropdown-content {
+  display: block;
+}
+.dropdown-content {
+  display: none;
+}
+.dropdown-content a {
+  padding: 10px 20px;
+  transition: transform 0.3s ease;
+}
+.dropdown-content a:hover {
+  transform: translateY(-5px);
+  background: #999;
+  color: #a0251e;
+}
+.menu-list a.has-icon {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.menu-list a.has-icon:hover {
+  transform: translateY(-10px);
+}
+
+.has-icon .fa-angle-down {
+  position: absolute;
+  right: 20px;
+}
+.nav-menu .apply {
+  display: none;
+}
+.nav-menu .lang {
+  display: flex;
+  justify-content: center;
+  font-size: 13px;
+  position: relative;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.nav-menu .lang a {
+  color: #8b9fb5;
+}
+.nav-menu .lang::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.3);
+}
+@media (min-width: 1024px) {
+  /* header */
+  .header {
+    background: #fff;
+  }
+
+  /* navbar */
+  .navbar {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    height: 120px;
+  }
+
+  /* logo */
+  .logo {
+    flex-shrink: 0;
+  }
+
+  /* 手機按鈕隱藏 */
+  .nav-right .nav-btn,
+  .menu-top {
+    display: none;
+  }
+
+  /* nav-menu 回歸正常 layout */
+  .nav-menu {
+    position: static;
+
+    width: auto;
+    height: auto;
+
+    margin-left: auto;
+
+    background: transparent;
+    color: #333;
+
+    transform: none;
+    transition: none;
+    z-index: auto;
+
+    display: flex;
+    align-items: center;
+  }
+
+  /* menu 橫排 */
+  .menu-list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  /* 第一層 menu */
+  .menu-list a,
+  .dropdown a {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    height: 120px;
+    padding: 0 18px;
+
+    color: #333;
+    font-size: 15px;
+    white-space: nowrap;
+
+    transition: 0.3s;
+  }
+
+  /* hover */
+  .menu-list a:hover {
+    color: #a0251e;
+  }
+
+  .menu-list a.has-icon:hover {
+    transform: none;
+    transition: none;
+  }
+
+  /* icon */
+  .has-icon .fa-angle-down {
+    display: none;
+  }
+
+  /* dropdown */
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-content {
+    position: absolute;
+    top: 70%;
+    left: 0;
+
+    min-width: 140px;
+
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    display: none;
+    z-index: 1000;
+  }
+
+  /* hover 顯示 dropdown */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* dropdown item */
+  .dropdown-content a {
+    display: block;
+
+    height: auto;
+    padding: 14px 20px;
+
+    color: #333;
+    text-align: left;
+    font-size: 14px;
+
+    transition: 0.3s;
+  }
+
+  .dropdown-content a:hover {
+    background: #a0251e;
+    color: #fff;
+    transform: none;
+  }
+
+  /* apply 區塊 */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+
+  /* apply button */
+  .nav-right .apply {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 46px;
+    padding: 0 28px;
+
+    border: 1px solid #dcdcdc;
+
+    color: #333;
+    font-size: 14px;
+
+    transition: 0.3s;
+  }
+
+  .nav-right .apply:hover {
+    background: #a0251e;
+    color: #fff;
+    border-color: #a0251e;
+  }
+
+  /* menu內的 apply 隱藏 */
+  .nav-menu .apply {
+    display: none;
+  }
+
+  /* 語系 */
+  .nav-menu .lang {
+    display: flex;
+    align-items: center;
+    padding-top: 0;
+    margin-top: 0;
+    position: relative;
+  }
+
+  .nav-menu .lang::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 14px;
+    background: #dcdcdc;
+  }
+
+  .nav-menu .lang a {
+    color: #666;
+    font-size: 13px;
+  }
+}
+/* Navbar end */
+
+/* Banner */
+.banner-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.banner-text {
+  padding: 20px;
+  background: #eee;
+  color: #002d5d;
+}
+.banner-text h2 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.banner-text h3 {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 10px 0px 20px;
+}
+
+.banner-text p {
+  font-size: 18px;
+}
+.scroll {
+  color: #555;
+  background: #eee;
+  font-size: 14px;
+  padding: 60px 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scroll .fa-angle-down {
+  font-size: 30px;
+}
+@media (min-width: 1024px) {
+  .banner-top {
+    display: flex;
+    /*     min-height: 100vh; */
+  }
+  /* 文字在左 */
+  .banner-text {
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 80px;
+    order: 1;
+  }
+  /* 圖片在右 */
+  .banner-hero {
+    width: 60%;
+    order: 2;
+    margin-top: -80px;
+  }
+  .banner-text h3 {
+    font-size: 60px;
+  }
+  .banner {
+    padding-top: 80px;
+  }
+}
+/* Banner end */
+/* About */
+.about .container {
+  width: 100%;
+  max-width: 600px;
+  color: #002d5d;
+}
+.about-item {
+  width: 90%;
+  margin: 30px auto;
+}
+.about-item h2 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.5;
+}
+.about-item h3 {
+  font-size: 22px;
+  font-weight: 300;
+}
+.about-item p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #555;
+  padding: 10px 0px 30px;
+}
+@media (min-width: 768px) {
+  .about-img {
+    position: relative;
+    height: 600px;
+    margin-bottom: 30px;
+  }
+  .img1 {
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    width: 100%;
+    height: 100%;
+    background: url("https://www.betocorp.com.tw/images/about01.png") no-repeat
+      center / cover;
+    z-index: 2;
+  }
+  .img2 {
+    width: 100%;
+    height: 100%;
+
+    background: url("https://www.betocorp.com.tw/images/about02.jpg") no-repeat
+      center / cover;
+  }
+  .img3 {
+    width: 100%;
+    height: 100%;
+    background: url("https://www.betocorp.com.tw/images/about04.jpg") no-repeat
+      center / cover;
+  }
+}
+.about-btn {
+  display: flex;
+  gap: 16px;
+}
+.about-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  padding: 14px 20px;
+  color: #555;
+  border: 1px solid #ccc;
+  transition: all 0.5s ease;
+}
+.about-btn a:hover {
+  background: #a0251e;
+  color: #fff;
+}
+.about-card {
+  display: flex;
+}
+.about-card .card {
+  flex: 1;
+  padding: 20px;
+  position: relative;
+}
+.about-card .card + .card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 50%;
+  width: 1px;
+  background: #555;
+}
+.about-card h4 {
+  display: block;
+  font-size: 26px;
+}
+.about-card span {
+  display: block;
+  font-size: 16px;
+  margin-top: 10px;
+}
+.about-card p {
+  font-size: 14px;
+}
+@media (min-width: 1024px) {
+  .about .container {
+    max-width: 1200px;
+  }
+
+  .about-item {
+    display: flex;
+    gap: 120px;
+    align-items: center;
+  }
+
+  .about-img,
+  .about-text {
+    flex: 1;
+  }
+  .about-item.reverse {
+    flex-direction: row-reverse;
+  }
+  .about-item {
+    width: 90%;
+    margin: 120px 0px auto;
+  }
+  .img3 {
+    margin-top: -180px;
+  }
+  .about-item.reverse .about-text {
+    text-align: right;
+  }
+  .about-card .card {
+    padding-right: 0;
+    padding-left: 40px;
+    margin-left: 40px;
+  }
+  .card-body {
+    text-align: center;
+  }
+  .card-body p {
+    text-align: left;
+  }
+
+  .card-body h4 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    font-size: 42px;
+    gap: 4px;
+  }
+}
+/* About end*/
+/* News */
+.news .container {
+  background: linear-gradient(#1e5799, #2989d8);
+  color: #fff;
+  padding: 60px 30px;
+}
+.news-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 0 40px;
+}
+.news-title h2 {
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 5px;
+}
+.news-btn a {
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  transition: all 0.5s ease;
+}
+.news-btn a:hover {
+  background: #a0251e;
+}
+
+.card-content a {
+  color: #fff;
+  font-size: 20px;
+}
+.card-body p {
+  font-size: 14px;
+  padding: 20px 0;
+}
+.card-body time {
+  font-size: 15px;
+  font-weight: 300;
+  opacity: 0.4;
+  display: block;
+  text-align: left;
+}
+@media (min-width: 1024px) {
+  .news .container {
+    max-width: 100%;
+    padding: 120px 80px;
+  }
+  .news-card.swiper-slide {
+    position: relative;
+    padding: 0 40px;
+  }
+
+  .news-card.swiper-slide:not(:last-child)::after {
+    content: "";
+    position: absolute;
+
+    top: 10%;
+    right: 0;
+
+    width: 2px;
+    height: 80%;
+
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+/* News end */
+/* items swiper  */
+.swiper img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /*object-fit 可設定其圖片內容與外框的關係，使用 cover 即表示內容會縮放到整個外框。*/
+}
+.swiper {
+  position: relative;
+  /*   padding: 0 30px; */
+}
+.swiper-slide {
+  position: relative;
+  height: auto;
+  /*   因為每張照片不同，所以這裡使用 height: auto; 將所有 .swiper-slide 設定為自適應高度。下面的 height: 100%; 會使圖片內容填滿外部容器的高度。 */
+}
+.slide-content {
+  position: absolute;
+  left: 30px;
+  top: 50px;
+  color: #002d5d;
+}
+.slide-content h3 {
+  font-size: 20px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  background: rgba(226, 226, 226, 0.8);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 99;
+  color: transparent;
+}
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #002d5d;
+}
+
+/* 改箭頭大小 */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+.swiper-button-prev::after {
+  transform: rotate(-135deg);
+}
+
+.swiper-button-next::after {
+  transform: rotate(45deg);
+}
+/* @media (min-width: 1024px) {
+  .swiper {
+    padding: 0;
+  }
+} */
+/* items swiper end */
+/* Recruit */
+.recruit-img {
+  width: 100%;
+}
+.recruit .container {
+  background: #eee;
+  padding: 20px;
+}
+.recruit-text {
+  padding: 30px;
+  outline: 1px solid #fff;
+}
+
+.recruit-text h2 {
+  color: #002d5d;
+  font-size: 40px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+.recruit-text p {
+  color: #002d5d;
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.recruit-text small {
+  color: #555;
+  font-size: 15px;
+}
+.recruit-btn a {
+  display: inline-block;
+  padding: 14px 60px;
+  color: #555;
+  font-size: 15px;
+  margin: 30px 0px;
+  border: 1px solid #555;
+  transition: all 0.5s ease;
+}
+.recruit-btn a:hover {
+  color: #fff;
+  background: #a0251e;
+}
+@media (min-width: 1024px) {
+  .recruit {
+    display: flex;
+  }
+
+  .recruit-img,
+  .recruit .container {
+    flex: 1;
+  }
+  .recruit-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+/* Recruit end */
+/* Footer */
+.footer {
+  background: lightgray;
+  padding: 20px;
+}
+.footer .container,
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.footer-item {
+  flex: 0;
+}
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 12px 0;
+}
+.accordion-content {
+  display: none;
+}
+.accordion-content a {
+  color: #555;
+  padding: 5px 0;
+  font-size: 13px;
+}
+.accordion-content a:hover {
+  color: #a0251e;
+}
+
+.footer-item.active .accordion-content {
+  display: flex;
+  flex-direction: column;
+}
+/* + / - 切換 */
+.accordion-title::after {
+  content: "+";
+}
+
+.footer-item.active .accordion-title::after {
+  content: "-";
+}
+.footer-logo {
+  width: 170px;
+  height: 35px;
+}
+.company-name {
+  font-size: 14px;
+  padding: 20px 0 25px;
+}
+.company-info {
+  font-size: 13px;
+  color: #555;
+}
+.social-media-icon {
+  padding: 15px 0;
+}
+.fa-youtube,
+.fa-linkedin-in {
+  background: #002d5d;
+  padding: 10px;
+  border-radius: 50%;
+}
+.fa-youtube:hover,
+.fa-linkedin-in:hover {
+  background: #a0251e;
+}
+.copyright {
+  font-size: 12px;
+  color: #9b9b9b;
+  line-height: 15px;
+}
+@media (min-width: 1024px) {
+  .footer .container {
+    max-width: 100%;
+    padding: 70px 20px 70px 0;
+  }
+  .footer .container,
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+  }
+  .footer-item {
+    flex: 1;
+    max-width: 160px;
+  }
+  .accordion-content {
+    display: block;
+  }
+  .accordion-title::after {
+    display: none;
+  }
+  .accordion-content a {
+    display: block;
+  }
+  .footer-info {
+    width: 320px;
+    flex-shrink: 0;
+    position: relative;
+    padding-left: 40px;
+  }
+  .footer-info::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 1px;
+    height: 80%;
+
+    background: #555;
+  }
+}
+/* Footer end */
